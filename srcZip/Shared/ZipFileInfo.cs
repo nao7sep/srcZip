@@ -10,9 +10,13 @@ namespace srcZip
     public class ZipFileInfo: IDisposable
     {
         public readonly FileInfo File; // 保存先のパス
+
         public readonly DirectoryInfo BaseDirectory; // 圧縮するディレクトリー
+
         public readonly FileStream FileStream;
+
         public readonly ZipArchive ZipArchive;
+
         private bool mIsDisposed = false;
 
         /// <summary>

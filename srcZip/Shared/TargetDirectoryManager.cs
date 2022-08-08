@@ -10,7 +10,9 @@ namespace srcZip
     public class TargetDirectoryManager
     {
         public readonly DirectoryInfo BaseDirectory; // 圧縮するディレクトリー
+
         public readonly ParamsFileInfo ParamsFile; // srcZip.txt のパス | あるとは限らない
+
         public readonly List <TargetFileInfo> Files = new List <TargetFileInfo> (); // 最終的に圧縮されるファイル
 
         public TargetDirectoryManager (string baseDirectoryPath)

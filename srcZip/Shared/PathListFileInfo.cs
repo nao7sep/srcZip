@@ -9,7 +9,9 @@ namespace srcZip
     public class PathListFileInfo
     {
         public readonly FileInfo File; // 保存先のパス
+
         public readonly DirectoryInfo BaseDirectory; // 圧縮するディレクトリー
+
         public readonly List <string> RelativePaths = new List <string> (); // ここに / 区切りの相対パスが入る
 
         public PathListFileInfo (string filePath, string baseDirectoryPath)
