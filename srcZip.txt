@@ -1,0 +1,13 @@
+﻿[Delete]
+Compiled
+
+[Copy]
+srcZip/bin/Release/net6.0 > Compiled
+
+[Exclude]
+.git
+.vs
+Archived
+srcZip/bin
+srcZip/obj
+.gitignore

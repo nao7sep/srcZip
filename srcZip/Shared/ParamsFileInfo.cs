@@ -48,13 +48,13 @@ namespace srcZip
                         if (Enum.TryParse <ParamKind> (xKindString, ignoreCase: true, out ParamKind xResult))
                             xKind = xResult;
 
-                        else throw new FormatException ("パラメーターの種類を認識できません: " + xKindString);
+                        else throw new InvalidDataException ("パラメーターの種類を認識できません: " + xKindString);
                     }
 
                     else
                     {
                         if (xKind == null)
-                            throw new FormatException ("パラメーターの種類が不明です。");
+                            throw new InvalidDataException ("パラメーターの種類が不明です。");
 
                         ParamInfo xParam = new ParamInfo (xKind.Value);
                         xParam.Values.AddRange (xLine.Split ('>', StringSplitOptions.TrimEntries));

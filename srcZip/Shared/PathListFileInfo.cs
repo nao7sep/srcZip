@@ -23,6 +23,9 @@ namespace srcZip
             return RelativePaths.Contains (Shared.ToRelativePath (absolutePath, BaseDirectory), StringComparer.OrdinalIgnoreCase);
         }
 
+        /// <summary>
+        /// 以前は行われた重複チェックが今では行われない
+        /// </summary>
         public void Add (string absolutePath)
         {
             RelativePaths.Add (Shared.ToRelativePath (absolutePath, BaseDirectory));

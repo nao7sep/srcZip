@@ -85,8 +85,10 @@
 
                                 foreach (TargetFileInfo xFile in xDirectoryManager.Files)
                                 {
-                                    xZipFile.Add (xFile.FilePath!);
-                                    xListFile.Add (xFile.FilePath!);
+                                    // xDirectoryManager.Files には重複がない
+
+                                    xZipFile.Add (xFile.FilePath);
+                                    xListFile.Add (xFile.FilePath);
                                 }
 
                                 xListFile.Save ();

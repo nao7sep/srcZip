@@ -78,6 +78,9 @@ namespace srcZip
                         // Visual Studio がロックしているなどで消せずにエラーになることがある
                         // Delete は Copy 前に使うもので、他のところでは Exclude が適する
 
+                        // ディレクトリーの圧縮では、何か一つでも問題があれば最終的な ZIP ファイルの信頼性が低下する
+                        // 上でのコピーも下での削除も、一度でも失敗すれば例外が投げられて Preprocess が打ち切りになるべき
+
                         if (Directory.Exists (xTargetPath))
                         {
                             File.SetAttributes (xTargetPath, FileAttributes.Directory);
@@ -152,9 +155,13 @@ namespace srcZip
                     }
 
                     // 古いコードには重複チェックが不要とのコメントが含まれていたが一応
+                    // 自分が詳しくない OS のマイナーな機能により同じパスが得られる可能性も想定
+                    // Files にはパスの重複がないことを保証しなければならない
 
                     if (xFiles.Any (x => x.FullName.Equals (xFile.FullName, StringComparison.OrdinalIgnoreCase)) == false)
                         xFiles.Add (xFile);
+
+                    else throw new InvalidDataException ("ファイルのパスが重複しています: " + xFile.FullName);
                 }
             }
 
