@@ -5,6 +5,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <ApplicationManifest>App.manifest</ApplicationManifest>
 
         <AssemblyName></AssemblyName>
         <AssemblyTitle></AssemblyTitle>
@@ -21,5 +22,9 @@
         <FileVersion></FileVersion>
         <InformationalVersion></InformationalVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
+    </ItemGroup>
 
 </Project>
