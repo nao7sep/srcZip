@@ -22,7 +22,7 @@ srcZip なら、srcZip 以外のソフトは不要で、テキストファイル
 
 ## 使い方
 
-https://github.com/nao7sep/srcZip/tree/main/Archived から最新版をダウンロードします（現在のところ、Windows 版のみですが、Mac でコンパイルすれば Mac でも動くかもしれません）。
+https://github.com/nao7sep/srcZip/tree/main/Archived から最新版をダウンロードします。
 
 アーカイブ内の Compiled ディレクトリーを展開します。
 
