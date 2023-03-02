@@ -50,10 +50,5 @@ srcZip.txt を ZIP ファイルに含めたくなければ、Exclude で除外�
 
 ## 連絡先
 
-何かあればお気軽にご連絡ください。
-
-* 井ノ口
 * https://twitter.com/nao7sep
 * nao7sep@gmail.com
-
-「こういうツールを書いてほしい」も、良いアイデアをいただければがんばります。
