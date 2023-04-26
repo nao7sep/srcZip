@@ -11,3 +11,5 @@ Archived
 srcZip/bin
 srcZip/obj
 .gitignore
+README.md
+taskKiller.txt
