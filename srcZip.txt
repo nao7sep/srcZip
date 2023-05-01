@@ -7,5 +7,5 @@ srcZip/bin/Release/net6.0 > Compiled
 [Exclude]
 .git
 .vs
-bin
-obj
+srcZip/bin
+srcZip/obj
