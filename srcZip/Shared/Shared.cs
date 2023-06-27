@@ -52,7 +52,7 @@ namespace srcZip
 
         public static void CopyDirectory (string sourcePath, string destPath)
         {
-            void iCopyDirectory (DirectoryInfo sourceDirectory, DirectoryInfo destDirectory)
+            static void iCopyDirectory (DirectoryInfo sourceDirectory, DirectoryInfo destDirectory)
             {
                 foreach (DirectoryInfo xSubdirectory in sourceDirectory.GetDirectories ())
                     iCopyDirectory (xSubdirectory, destDirectory.CreateSubdirectory (xSubdirectory.Name));

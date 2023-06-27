@@ -49,6 +49,9 @@ namespace srcZip
             {
                 ZipArchive.Dispose ();
                 FileStream.Dispose ();
+
+                GC.SuppressFinalize (this);
+
                 mIsDisposed = true;
             }
         }
