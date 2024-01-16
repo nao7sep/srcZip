@@ -1,8 +1,11 @@
 ﻿[Delete]
-Compiled
+App
 
 [Copy]
-srcZip/bin/Release/net6.0 > Compiled
+srcZip/bin/Release/net6.0 > App
+
+[Delete]
+App/srcZip.pdb
 
 [Exclude]
 .git
